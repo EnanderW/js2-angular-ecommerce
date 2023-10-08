@@ -1,0 +1,14 @@
+<section *ngIf="product">
+  <h2>{{ product.title }}</h2>
+  <div>
+    <img width="100" height="100" src="{{ product.thumbnail }}" />
+    <p>{{ product.description }}</p>
+    <span>Rating: {{ product.rating }}</span>
+    <br />
+    <span>Category: {{ product.category }}</span>
+  </div>
+  <button *ngIf="!isInCart()" (click)="addToCart()">Add to cart</button>
+  <button *ngIf="isInCart()" (click)="removeFromCart()">
+    Remove from cart
+  </button>
+</section>

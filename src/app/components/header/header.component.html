@@ -1,0 +1,5 @@
+<header>
+  <input #search placeholder="Search product..." />
+  <button (click)="doSearch(search.value)">Search</button>
+  <span (click)="toggleCart()">Cart: {{ cartAmount }}</span>
+</header>

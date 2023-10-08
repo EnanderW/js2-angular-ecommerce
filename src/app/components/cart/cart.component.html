@@ -1,0 +1,18 @@
+<section [ngClass]="modalClasses">
+  <button (click)="closeCart()">Close</button>
+  <div>
+    <ul>
+      <li *ngFor="let item of items">
+        <article>
+          <span>{{ item.product.title }}</span>
+          <br />
+          <span>Price: {{ item.product.price }}</span>
+          <br />
+          <span>Amount: {{ item.amount }}</span>
+          <button (click)="addAmount(item)">+</button>
+          <button (click)="reduceAmount(item)">-</button>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>

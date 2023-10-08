@@ -1,0 +1,13 @@
+<section>
+  <div>
+    <h2>{{ title }}</h2>
+    <button routerLink="/{{ link }}">See All</button>
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let product of products.slice(0, 6)">
+        <app-product-item [product]="product"></app-product-item>
+      </li>
+    </ul>
+  </div>
+</section>
